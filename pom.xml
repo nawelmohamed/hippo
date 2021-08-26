@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.4.3</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	
+	<groupId>com.yoterra</groupId>
+	<artifactId>hippo-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>hippo-parent</name>
+	<description>Hippo services parent</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<com.yoterra.dataprocessing.version>0.3.24-SNAPSHOT</com.yoterra.dataprocessing.version>
+	</properties>
+	
+	<modules>
+		<module>hippo-common</module>
+		<module>hippo-rest</module>
+		<module>hippo-cs</module>
+	</modules>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.cassandraunit</groupId>
+				<artifactId>cassandra-unit-spring</artifactId>
+				<version>3.11.2.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cassandraunit</groupId>
+				<artifactId>cassandra-unit-shaded</artifactId>
+				<version>3.11.2.0</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>2.8.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.groupangle</groupId>
+				<artifactId>dp-core-common</artifactId>
+				<version>${com.yoterra.dataprocessing.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.groupangle</groupId>
+				<artifactId>dp-core-cassandra</artifactId>
+				<version>${com.yoterra.dataprocessing.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.groupangle</groupId>
+				<artifactId>dp-core-data</artifactId>
+				<version>${com.yoterra.dataprocessing.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.groupangle</groupId>
+				<artifactId>dp-core-data-repos</artifactId>
+				<version>${com.yoterra.dataprocessing.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>it.ozimov</groupId>
+				<artifactId>embedded-redis</artifactId>
+				<version>0.7.2</version>
+				<scope>test</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.asynchttpclient</groupId>
+				<artifactId>async-http-client</artifactId>
+				<version>2.5.2</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>org.springdoc</groupId>
+			    <artifactId>springdoc-openapi-ui</artifactId>
+			    <version>1.5.6</version>
+			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/com.google.firebase/firebase-admin -->
+			<dependency>
+			    <groupId>com.google.firebase</groupId>
+			    <artifactId>firebase-admin</artifactId>
+			    <version>7.2.0</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>io.dropwizard.metrics</groupId>
+				<artifactId>metrics-core</artifactId>
+				<version>3.2.2</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+			<dependency>
+			    <groupId>com.google.guava</groupId>
+			    <artifactId>guava</artifactId>
+			    <version>29.0-android</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>com.yoterra</groupId>
+			    <artifactId>hippo-common</artifactId>
+			    <version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

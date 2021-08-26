@@ -1,0 +1,15 @@
+export default {
+  HippoOrangeHorizontal: require('../assets/images/HippoOrangeHorizontal.png'),
+  HippoOrangeOnly: require('../assets/images/HippoOrangeOnly.png'),
+  Sed38512: require('../assets/images/Sed38512.png'),
+  HippoUpCompressed: require('../assets/images/HippoUpCompressed.gif'),
+  HippoUp: require('../assets/images/HippoUp.gif'),
+  Vineyard: require('../assets/images/vineyard.jpg'),
+  Space: require('../assets/images/Space.jpg'),
+  Elliot: require('../assets/images/elliot.jpg'),
+  HippoSplash: require('../assets/images/HippoSplash.png'),
+  Model024: require('../assets/images/Model024.jpg'),
+  ErikmcleannTCtYYyVqSYunsplash: require('../assets/images/ErikmcleannTCtYYyVqSYunsplash.png'),
+  Elliot: require('../assets/images/elliot.jpg'),
+  ProfilePicturePlaceholder: require('../assets/images/ProfilePicturePlaceholder.png'),
+};
